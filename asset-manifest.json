@@ -1,23 +1,31 @@
 {
   "files": {
-    "main.css": "/ajker-arban/static/css/main.a8f57334.chunk.css",
-    "main.js": "/ajker-arban/static/js/main.1399d337.chunk.js",
-    "main.js.map": "/ajker-arban/static/js/main.1399d337.chunk.js.map",
+    "main.css": "/ajker-arban/static/css/main.d285000a.chunk.css",
+    "main.js": "/ajker-arban/static/js/main.546d3fe7.chunk.js",
+    "main.js.map": "/ajker-arban/static/js/main.546d3fe7.chunk.js.map",
     "runtime-main.js": "/ajker-arban/static/js/runtime-main.fb5e9263.js",
     "runtime-main.js.map": "/ajker-arban/static/js/runtime-main.fb5e9263.js.map",
-    "static/js/2.f239e58c.chunk.js": "/ajker-arban/static/js/2.f239e58c.chunk.js",
-    "static/js/2.f239e58c.chunk.js.map": "/ajker-arban/static/js/2.f239e58c.chunk.js.map",
+    "static/js/2.57997374.chunk.js": "/ajker-arban/static/js/2.57997374.chunk.js",
+    "static/js/2.57997374.chunk.js.map": "/ajker-arban/static/js/2.57997374.chunk.js.map",
     "index.html": "/ajker-arban/index.html",
-    "static/css/main.a8f57334.chunk.css.map": "/ajker-arban/static/css/main.a8f57334.chunk.css.map",
-    "static/js/2.f239e58c.chunk.js.LICENSE.txt": "/ajker-arban/static/js/2.f239e58c.chunk.js.LICENSE.txt",
+    "static/css/main.d285000a.chunk.css.map": "/ajker-arban/static/css/main.d285000a.chunk.css.map",
+    "static/js/2.57997374.chunk.js.LICENSE.txt": "/ajker-arban/static/js/2.57997374.chunk.js.LICENSE.txt",
+    "static/media/43XX_BIAX_1HPGMIAA1_300x250_US_ENG_01.d2381f3d.jpg": "/ajker-arban/static/media/43XX_BIAX_1HPGMIAA1_300x250_US_ENG_01.d2381f3d.jpg",
+    "static/media/43XX_BIAX_1HPGMIAA1_970x250_US_ENG_01.336d848a.jpg": "/ajker-arban/static/media/43XX_BIAX_1HPGMIAA1_970x250_US_ENG_01.336d848a.jpg",
+    "static/media/48_HPK_T6768_HP-LJ400_01_160x400.03336d01.gif": "/ajker-arban/static/media/48_HPK_T6768_HP-LJ400_01_160x400.03336d01.gif",
+    "static/media/48_HPK_T6768_HP-LJ400_01_2000x180.c509cd06.gif": "/ajker-arban/static/media/48_HPK_T6768_HP-LJ400_01_2000x180.c509cd06.gif",
+    "static/media/48_HPK_T6768_HP-LJ400_01_640x100.89b0b3a5.gif": "/ajker-arban/static/media/48_HPK_T6768_HP-LJ400_01_640x100.89b0b3a5.gif",
     "static/media/ajker-arban-1.624339ca.png": "/ajker-arban/static/media/ajker-arban-1.624339ca.png",
     "static/media/feature.24845e0f.jpg": "/ajker-arban/static/media/feature.24845e0f.jpg",
-    "static/media/kader.d7881c6e.jpg": "/ajker-arban/static/media/kader.d7881c6e.jpg"
+    "static/media/kader.d7881c6e.jpg": "/ajker-arban/static/media/kader.d7881c6e.jpg",
+    "static/media/news2.eb98427f.jpg": "/ajker-arban/static/media/news2.eb98427f.jpg",
+    "static/media/news4.8307bf66.jpg": "/ajker-arban/static/media/news4.8307bf66.jpg",
+    "static/media/news5.c1eebc27.jpg": "/ajker-arban/static/media/news5.c1eebc27.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.fb5e9263.js",
-    "static/js/2.f239e58c.chunk.js",
-    "static/css/main.a8f57334.chunk.css",
-    "static/js/main.1399d337.chunk.js"
+    "static/js/2.57997374.chunk.js",
+    "static/css/main.d285000a.chunk.css",
+    "static/js/main.546d3fe7.chunk.js"
   ]
 }
