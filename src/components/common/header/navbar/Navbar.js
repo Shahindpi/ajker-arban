@@ -48,7 +48,7 @@ class Navbar extends Component{
                                 <li><Link to="/techWorld">টেক ওয়ার্ল্ড</Link></li>
                                 <li><Link to="/lifestyle">জীবনযাপন</Link></li>
                                 <li><Link to="/health">হেলথ কর্নার</Link></li>
-                                <li><Link to="/industry">শিল্প ও বাণিজ্য</Link></li>
+                                {/* <li><Link to="/industry">শিল্প ও বাণিজ্য</Link></li>
                                 <li><Link to="/culture">সাহিত্য ও সংস্কৃতি</Link></li>
                                 <li><Link to="/educations">শিক্ষাঙ্গন</Link></li>
                                 <li><Link to="/islam">ইসলাম ও জীবন</Link></li>
@@ -56,7 +56,7 @@ class Navbar extends Component{
                                 <li><Link to="/agriculture">কৃষি</Link></li>
                                 <li><Link to="/vacancy">চাকরি</Link></li>
                                 <li><Link to="/editorial">সম্পাদকীয়</Link></li>
-                                <li><Link to="/feature">ফিচার</Link></li>
+                                <li><Link to="/feature">ফিচার</Link></li> */}
                             </ul>
                         </div>
                         <div className="menu-bar desktop-hide">
