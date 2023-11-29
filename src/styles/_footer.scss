@@ -1,0 +1,89 @@
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+.footer-section{
+    background: $black;
+    color : $white;
+    &__wrapper{
+        &--container{
+            @extend .flex-container;
+            justify-content: center;
+            .column{
+                padding: 2% 5%;
+                .title{
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding-bottom: 10px;
+                }
+                span{
+                    display: block;
+                    padding : 3px 0;
+                    font-size: 12px;
+                    a{
+                        color : $sky;
+                        padding: 0 3px;
+                    }
+                    &:last-child{
+                        @extend .flex-container;
+                    }
+                }
+                &:first-child{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        max-width: 200px;
+                    }
+                }
+                &:last-child{
+                    ul{
+                        @extend .flex-container;
+                        align-items: center;
+                        justify-content: center;
+                        li{
+                            a{
+                                @extend .flex-container;
+                                margin: 5px;
+                                width: 35px;
+                                height: 35px;
+                                align-items: center;
+                                justify-content: center;
+                                color : $white;
+                                svg{
+                                    font-size: 2rem;
+                                }
+                            }
+                            &:nth-child(1){
+                                a{
+                                    svg{
+                                        color: $fb;
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                a{
+                                    svg{
+                                        color: $twitter;
+                                    }
+                                }
+                            }
+                            &:nth-child(3){
+                                a{
+                                    svg{
+                                        color: $youtube;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    .title{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

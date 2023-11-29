@@ -1,0 +1,96 @@
+@import "./variables";
+@import "./mixins";
+body{
+    font-family: solaimanlipi,calibri,sutonnymj,siyamrupali,arial,Georgia,times new roman,Times,serif;
+    font-size: 14px;
+    background-image: url("../assets/icon/bg.jpg");
+    background-size: auto;
+    background-repeat: repeat;
+    margin: 0;
+}
+
+.main-wrapper ul{
+    margin : 0;
+    padding : 0;
+    li{
+        list-style: none;
+    }
+}
+
+.main-wrapper a{
+    text-decoration: none !important;
+    color : $black;
+    transition: 0.8 ease-in-out;
+    &:hover{
+        color : $default;
+    }
+}
+
+.main-wrapper img{
+    width: 100%;
+}
+
+a:-webkit-any-link {
+    color: $black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*** Common Classes ***/
+
+.custom-row{
+    padding : 2% 5%;
+}
+
+.desktop-hide{
+    display : none;
+}
+
+.mobile-hide{
+    display : block;
+}
+
+.hide-content{
+    display: none;
+}
+
+.show-content{
+    display: block;
+}
+
+.flex-container{
+    display : flex;
+}
+
+.flex-box{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.flex-nowrap{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*** News Time and Category design ***/
+.news-time{
+    padding: 10px 0;
+    font-size: 13px;
+    span{
+        color :$gray;
+        img{
+            width : 10px;
+            margin: 0 5px 0 0;
+        }
+        &:first-child{
+            padding: 0 5px 0 0;
+        }
+        &:last-child{
+            padding: 0 0 0 5px;
+        }
+    }
+}

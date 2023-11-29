@@ -1,0 +1,101 @@
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+.header-section{
+    background: $white;
+    position: -webkit-sticky;
+    position: sticky;
+    width : 100%;
+    z-index: 99999;
+    min-height: 65px;
+    top: 0;
+    border-bottom: 1px solid $off-white;
+    box-shadow: 0px 5px 10px -12px $gray;
+    .header-content{
+        padding : 10px 5% 0;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        .logo{
+            max-width: 180px;
+            min-width: 130px;
+            padding: 14px 0;
+        }
+        .menu-bar{
+            padding-left: 30px;
+            overflow-x: auto;
+            .flex-container{
+                margin: 0;
+                padding : 0;
+                overflow-y: auto;
+                li{
+                    list-style: none;
+                    a{
+                        padding : 14px 12px;
+                        color : $black;
+                        font-size : 14px;
+                        &:hover{
+                            color: $default;
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            padding-right: 0;
+                        }
+                    }
+                    &:nth-child(11){
+                        min-width: 140px;
+                    }
+                    &:nth-child(12){
+                        min-width: 150px;
+                    }
+                }
+            }
+            .hamburger{
+                width : 2rem;
+                height: 2rem;
+                display: flex;
+                flex-flow: column nowrap;
+                justify-content: space-around;
+                position: absolute;
+                top: 15px;
+                right : 20px;
+                span{
+                    width : 2rem;
+                    height: 0.25rem;
+                    border-radius: 10px;
+                    background : $gray;
+                    &:hover{
+                        &:nth-child(1){
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+            .showBurger{
+                span{
+                    background : $white;
+                    &:nth-child(1){
+                        transform: rotate(45deg);
+                    }
+                    &:nth-child(2){
+                        transform: rotate(-45deg);
+                        margin-top: -32px;
+                    }
+                    &:hover{
+                        background : #bee0f5;
+                        transition: 0.5 ease-in-out;
+                        &:nth-child(1){
+                            transform: rotate(-45deg);
+                        }
+                        &:nth-child(2){
+                            transform: rotate(45deg);
+                            margin-top: -32px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

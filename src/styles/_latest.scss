@@ -1,0 +1,51 @@
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+
+.latest-bulletins-container{
+    &__single{
+        padding: 15px 0;
+        a{
+            @extend .flex-nowrap;
+            align-items: flex-start;
+            .latest-bulletins-container__single--img{
+                max-width: 100px;
+            }
+            .latest-bulletins-container__single--title{
+                font-size: 16px;
+                padding: 0 0 0 10px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+
+// Tab buttons
+.bulletins{
+    .nav-tabs{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin-bottom: 10px !important;
+        .nav-item{
+            width: 50%;
+        }
+        .nav-item.show .nav-link, .nav-link.active{
+            background: $default;
+            color: $white;
+        }
+        .nav-link{
+            color: $white;
+            background: $default2;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 0;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}

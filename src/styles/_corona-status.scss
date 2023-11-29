@@ -1,0 +1,73 @@
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+.corona-status{
+    padding-bottom: 16px;
+    &__wrapper{
+        background : $off-white;
+        .sidebar-title{
+            font-weight: 600;
+            font-size: 16px;
+            padding : 10px 10px 5px;
+            text-align: center;
+            width: 100%;
+        }
+        &--container{
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            .column{
+                width:50%;
+                ul{
+                    li{
+                        font-size: 14px;
+                        padding : 5px;
+                        border-radius: 5px;
+                        margin : 5px 15px;
+                        &:nth-child(7){
+                            color : $white;
+                        }
+                        &:first-child{
+                            font-weight: 600;
+                            margin: 5px 0 !important;
+                            border-radius: 0;
+                        }
+                        &:last-child{
+                            font-size: 10px;
+                            background: none;
+                        }
+                    }
+                }
+                &:first-child{
+                    ul{
+                        text-align: center;
+                        border-right : 1px solid #dae1e4;
+                        li{
+                            &:nth-of-type(odd){
+                                background : #fcbd87;
+                            }
+                            &:nth-child(7){
+                                background : #f25822;
+                            }
+                        }
+                    }
+                }
+                &:last-child{
+                    ul{
+                        text-align: center;
+                        li{
+                            &:nth-of-type(odd){
+                                background : $light-blue;
+                            }
+                            &:nth-child(7){
+                                background : #00acee;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import "./variables";
+@import "./mixins";
+
+.page-wrapper{
+    .breadcrumb{
+        margin:1rem 0 0;
+        ul{
+            margin: 0 5px;
+            padding: 0;
+            li{
+                display: inline-block;
+                background: $off-white;
+                margin: 5px;
+                a{
+                    padding: 3px 10px;
+                    color: $gray;
+                    font-size: 0.8rem;
+                    border-radius: 5px;
+                }
+                &:first-child{
+                    margin-left: 0;
+                }
+                &:last-child{
+                    a{
+                        color: $black;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    .page-details{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        .news-details{
+            width: 68%;
+            &__title{
+                font-size: 2rem;
+                font-weight: 700;
+                padding: 30px 0;
+            }
+            &__published-by{
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                ul{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    padding: 0 0 5px;
+                    &:first-child{
+                        li{
+                            &:first-child{
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    li{
+                        font-size: 0.8rem;
+                        &:first-child{
+                            padding: 0 10px 0 0;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+            &__img{
+                &--caption{
+                    padding: 10px;
+                    border-bottom: 1px solid $off-white;
+                    p{
+                        margin: 0;
+                        padding: 0;
+                        font-size: 0.9rem;
+                        color: $black;
+                        span{
+                            font-size: 0.7rem;
+                            padding-left: 10px;
+                            color: $gray;
+                        }
+                    }
+                }
+            }
+            &__social{}
+            &__text{
+                padding: 2rem 0;
+                font-size: 1.2rem;
+                line-height: 36px;
+                text-align: justify;
+            }
+        }
+        .page-sidebar{
+            width:28%;
+            padding: 30px 0;
+            .sidebar-videos{
+                iframe{
+                    max-width: 100% !important;
+                    max-height: 300px;
+                }
+            }
+            .bulletins{
+                margin-top: 30px;
+            }
+        }
+    }
+}

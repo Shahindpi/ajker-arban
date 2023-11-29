@@ -1,0 +1,40 @@
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+.carousel{
+    padding: 30px;
+    .single-item{
+        padding: 8px;
+        img{
+
+        }
+        h5{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: initial;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            font-size: 14px;
+            margin: 10px 0;
+            color: $black;
+        }
+    }
+    .slick-slider{
+        .slick-prev{
+            color: $black;
+            width: 28px;
+            height: 28px;
+        }
+        .slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+            color: $default;
+            outline: none;
+        }
+        .slick-next{
+            color: $black;
+            width: 28px;
+            height: 28px;
+        }
+    }
+}

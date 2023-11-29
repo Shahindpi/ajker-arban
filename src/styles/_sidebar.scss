@@ -1,0 +1,92 @@
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+.sidebar-coentent{
+    .category-wrapper{
+        margin: 30px 0;
+        .cat-thumbnail{
+            margin : 20px 0 30px;
+            .single-column{
+                justify-content: space-between;
+                .single-news{
+                    width: 48%;
+                    margin-bottom : 16px;
+                    flex-wrap: wrap;
+                    .single-news__image{
+                        width : 100%;
+                    }
+                    .text-wrapper{
+                        width : 100%;
+                        .single-news__title{
+                            font-size: 13px;
+                            font-weight: normal;
+                        }
+                        .single-news__description{
+                            display: none;
+                        }
+                    }
+                }
+                &:last-child{
+                    .single-news{
+                        padding : 0;
+                    }
+                }
+            }
+        }
+        .single-feature{
+            margin : 20px 0;
+            .single-column{
+                width : 100%;
+                .single-news{
+                    .single-news__description{
+                        padding-bottom: 15px;
+                        font-size: 14px;
+                    }
+                    .single-news__title{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .cat-double-feature{
+            .single-column{
+                width : 100%;
+                &:first-child{
+                    .single-news__title{
+                        font-size: 16px !important;
+                    }
+                    .single-news__description{
+                        padding-bottom: 0 !important;
+                    }
+                }
+                &:last-child{
+                    display: none;
+                }
+                .single-news{
+                    flex-wrap: wrap;
+                    .single-news__image{
+                        width : 100%;
+                    }
+                    .single-news__title{
+                        font-size: 14px;
+                        font-weight: 600;
+                        width : 100%;
+                        margin: 0;
+                        padding : 10px 0;
+                        a{
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .page-sidebar{
+        .sidebar-videos{
+            iframe{
+                max-width: 100%;
+            }
+        }
+    }
+}

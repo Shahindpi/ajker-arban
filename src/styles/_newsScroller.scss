@@ -1,0 +1,51 @@
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+.scroller-section{
+    background: rgba(255, 255, 255, 0.6);
+    &__content{
+        .scroller-wrapper{
+            border : 2px solid $default;
+            border-right: 10px solid $default;
+        }
+        &--title{
+            background : $default;
+            position: relative;
+            padding: 8px 10px;
+            color : $white;
+            z-index: 99;
+            span{
+                background : $default;
+                position: absolute;
+                right: -7px;
+                transform: rotate(45deg);
+                display: block;
+                width: 14px;
+                height: 14px;
+                top: 12px;
+            }
+        }
+        &--list{
+            
+            li{
+                display: flex;
+                align-items: center;
+                img{
+                    width : 14px;
+                }
+                a{
+                    padding: 0 16px 0 5px;
+                    color : $black;
+                    &:hover{
+                        color : $default;
+                    }
+                }
+            }
+        }
+        .flex-container{
+            align-items: center;
+            justify-content: flex-start;
+        }
+    }
+}

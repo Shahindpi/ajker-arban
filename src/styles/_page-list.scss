@@ -1,0 +1,11 @@
+@import "./variables";
+@import "./common";
+@import "./mixins";
+
+
+.page-list{
+    .page-list__featureNews{
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+}

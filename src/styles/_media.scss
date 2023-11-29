@@ -1,0 +1,343 @@
+
+// *** =================================
+// Labtop and desktop devices ( for large display ) ***
+
+@media only screen and (min-width: 2560px) {
+
+}
+
+
+// *** =================================
+// Labtop and desktop devices ( up to 19 inch ) ***
+
+@media only screen and (min-width: 1920px) and (max-width: 2559px) {
+
+}
+
+
+// *** =================================
+// Labtop and desktop devices ( up to 14 inch ) ***
+
+@media only screen and (min-width: 1440px) and (max-width: 1919px) {
+
+}
+
+
+// *** =================================
+// Labtop devices ( Under 14 inch ) ***
+
+@media only screen and (min-width: 1280px) and (max-width: 1439px) {
+
+}
+
+
+// *** =================================
+// Notebook devices  ***
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
+
+}
+
+
+// *** =================================
+// Tab devices  ***
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+
+    // *** Feature news section ***
+    .feature-news-section{
+        &__content{
+            &--signle-news{
+                .feature-image{
+                    a{
+                        img{
+                            width: 140%;
+                            margin-left : -20%;
+                        }
+                    }
+                }
+            }
+            &--double-column {
+                .double-item {
+                    width: 100%;
+                    &__title{
+                        padding: 10px 0 0;
+                        font-size : 14px;
+                    }
+                    &__image{
+                        width: 25%;
+                    }
+                    &__description{
+                        width: 72%;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    // Details page
+    .page-wrapper{
+        .page-details{
+            .news-details{
+
+                &__title{
+                    font-size: 1rem;
+                    padding: 20px 0;
+                }
+                &__text{
+                    padding: 1rem 0;
+                    font-size: 1rem;
+                    line-height: 26px;
+                }
+            }
+            .page-sidebar{
+
+            }
+        }
+    }
+
+
+}
+
+
+// *** =================================
+// Mobile devices  ***
+
+@media only screen and (max-width: 767px) {
+
+    // *** Common css ***
+    .custom-row{
+        padding : 10px 0;
+    }
+
+    .desktop-hide{
+        display : block;
+    }
+
+    .mobile-hide{
+        display : none;
+    }
+
+    .flex-container{
+        flex-wrap: wrap;
+    }
+
+    
+    // Header Section
+    .header-section{
+        .header-content{
+            position: relative;
+            .menu-bar{
+                .flex-container{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background : rgba(249, 109, 32, 0.98);
+                    color : $white;
+                    width : 250px;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding : 20px 30px;
+                    box-shadow: 3px 5px 15px #ce5715;
+                    border-radius: 5px 0 0 5px;
+                    li{
+                        a{
+                            border-bottom: 1px solid #fb8c4f;
+                            color : $white;
+                        }
+                    }
+                    svg{
+                        margin: -26px 0 0 -40px;
+                        font-size: 24px;
+                        background: $white;
+                        width: 26px;
+                        height: 26px;
+                        border-radius: 50%;
+                        color: $default;
+                        padding: 5px;
+                        box-shadow: 0px 2px 5px 0px $black;
+                    }
+                }
+            }
+        }
+    }
+
+
+    // Scroller Section
+    .scroller-section{
+        &__content{
+            .scroller-wrapper{
+                flex-wrap: nowrap;
+                marquee{
+                    ul{
+                        flex-wrap: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    // *** Main header section ***
+    .header-section{
+        .header-content{
+            padding: 16px 5%;
+            .logo{
+                padding : 0;
+            }
+        }
+    }
+
+    
+    // *** Feature news section ***
+    .feature-news-section{
+        &__content{
+            &--double-column {
+                padding: 0 8px;
+                .double-item {
+                    width: 100%;
+                    &__title{
+
+                    }
+                    &__image{
+                        width: 100%;
+                    }
+                    &__description{
+                        padding : 10px 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // Category Section
+    .category-section{
+        &__content{
+            flex-wrap: wrap;
+            &--column{
+                &:first-child{
+                    width: 100%;
+                }
+                &:last-child{
+                    width: 100%;
+                }
+                .category-wrapper{
+                    &__content{
+                        .single-column{
+                            width : 100%;
+                            .single-news{
+                                .single-news__description{
+                                    padding-bottom: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .single-feature{
+                        .single-column{
+                            &:last-child{
+                                .single-news{
+                                    &:last-child{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .cat-double-feature{
+                        .single-column{
+                            &:nth-child(2){
+                                display: none;
+                            }
+                        }
+                    }
+                    .cat-thumbnail{
+                        .single-column{
+                            .single-news{
+                                .single-news__image{
+                                    width : 48%;
+                                }
+                                .text-wrapper{
+                                    width : 48%;
+                                    .single-news__title{
+                                        font-size: 16px;
+                                        font-weight: 500;
+                                    }
+                                    .single-news__description{
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .sidebar-coentent{
+                    .category-wrapper{
+                        &__content{
+                            
+                        }
+                        .cat-thumbnail{
+                            .single-column{
+                                .single-news{
+                                    width : 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Footer
+    .footer-section{
+        &__wrapper{
+            &--container{
+                .column{
+                    text-align: center;
+                    padding: 5% 5% 0;
+                }
+            }
+        }
+    }
+
+    // Details page
+    .page-wrapper{
+        .page-details{
+            flex-wrap: wrap;
+            padding: 0 15px;
+            .news-details{
+                width: 100%;
+                &__title{
+                    font-size: 1rem;
+                    padding: 20px 0;
+                }
+                &__text{
+                    padding: 1rem 0;
+                    font-size: 1rem;
+                    line-height: 26px;
+                }
+            }
+            .page-sidebar{
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+// Galaxy S
+
+@media only screen and (max-width:360px){
+
+}
+
+// Small Mobile
+
+@media only screen and (max-width:320px){
+ 
+}
