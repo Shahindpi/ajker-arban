@@ -1,24 +1,18 @@
-
+import React from 'react';
 import { useState } from 'react';
-import NewsScroller from './../scroller/NewsScroller';
-import FeatureNews from './../feature_news/FeatureNews';
-// import HomeSlider from '../components/home_category/Carousel';
-import SingleFeature from './../home_category/SingleFeature';
-import DoubleFeature from './../home_category/DoubleFeature';
-import ThumbnailList from './../home_category/Thumbnail';
-import Navbar from './../common/header/navbar/Navbar';
-import Sidebar from './../home_sidebar/Sidebar'
-import Footer from './../common/footer/Footer';
-import Advertise from './../../components/common/advertise/Advertise';
-import AdsImage from './../../assets/images/ads/48_HPK_T6768_HP-LJ400_01_2000x180.gif';
-import AdsImageMobile from './../../assets/images/ads/48_HPK_T6768_HP-LJ400_01_640x100.gif';
-import AdsHorizontal_M from './../../assets/images/ads/48_HPK_T6768_HP-LJ400_01_640x100.gif';
-// import AdsHorizontal_Static from './../../src/assets/images/ads/43XX_BIAX_1HPGMIAA1_970x250_US_ENG_01.jpg';
-import AdsHorizontal_Static from './../../assets/images/ads/43XX_BIAX_1HPGMIAA1_970x250_US_ENG_01.jpg';
-import FeaturePolitics from '../feature_news/FeaturePolitics';
-import FeatureInternational from '../feature_news/FeatureInternational';
+import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import news_img from '../../assets/images/news-img1.jpg';
+import stroller from '../../assets/images/ads/stroller2.gif';
+import sidebar_ads1 from '../../assets/images/ads/thumb.gif';
+import Navbar from '../common/header/navbar/Navbar';
+import Footer from '../common/footer/Footer';
+import FilterTab from '../home_sidebar/FilterTab';
+// import SlickCarousel from '../common/carousel/Carousel';
+import { GoChevronRight } from "react-icons/go";
 
-function Homepage(){
+function Previews() {
+
     const [featureNews, setFeatureNews] = useState([
         {
             "id" : 1,
@@ -150,59 +144,81 @@ function Homepage(){
                 }
             ]
         },
-        {
-            "id" : 11,
-            "title" : "title",
-            "descriptions" : "descriptions",
-            "img" : "https://ajkerarban.com/test/static/media/news2.eb98427faf2f9e9054c9.jpg",
-            "alt" : "আরবান ডেস্ক",
-            "category" : [
-                {
-                    "id" : 2,
-                    "name" : "bangladesh"
-                }
-            ]
-        },
     ]);
 
-    return(
-        <div className="main-wrapper">
+
+
+    const { id } = useParams(); // Get the ID from URL params
+
+    // Find the specific item using the ID from URL params
+    const singleItem = featureNews.find(item => item.id === parseInt(id));
+
+    if (!singleItem) {
+        return <div>Item not found</div>;
+      }
+  
+
+    return (
+        <div className='page-wrapper main-wrapper'>
             <Navbar />
-            <div className="custom-row mobile-hide top-ads"><Advertise ads={AdsImage} /></div>
-            <div className="custom-row desktop-hide top-ads"><Advertise ads={AdsImageMobile} /></div>
-            <NewsScroller />
-            <FeatureNews featureNews={featureNews} />
+            <div className='custom-row'>
+            <div className='breadcrumb'>
+                    <ul>
+                        <li><Link to="/">প্রচ্ছদ <span><GoChevronRight /></span></Link></li>
+                        <li><Link to="/#">আইন ও মানবাধিকার <span><GoChevronRight /></span></Link></li>
+                        <li><Link to="/#">শীর্ষ সংবাদ</Link></li>
+                    </ul>
+                </div>
+                <div className='page-details'>
+                        <div className='news-details'>
+                        <div className='news-details__title'>
+                            {singleItem.title}
+                        </div>
+                        <div className='news-details__published-by'>
+                            <ul>
+                                <li><b>আরবান ডেস্ক</b></li>
+                                {/* <li>প্রকাশ: ১৬ জুন ২০২২</li> */}
+                            </ul>
+                            {/* <ul>
+                                <li>Views 20</li>
+                                <li>Liked 3</li>
+                            </ul> */}
+                        </div>
+                        <div className='news-details__img'>
+                            <img src={singleItem.img} alt={singleItem.alt} />
+                            <div className='news-details__img--caption'>
+                                {/* <p>নেইমারদের ধরার সুযোগ আপাতত হচ্ছে না মেসির আর্জেন্টিনার <span>ছবি: রয়টার্স </span></p> */}
+                                <p>{singleItem.title}</p>
+                            </div>
+                        </div>
+                        <div className='news-details__social'>
 
-            {/* Homepage Categories */}
-            <div className="category-section">
-                    <div className="category-section__content custom-row">
-
-                    {/* Main Content */}
-                    <div className="category-section__content--column">
-                        
-                        <FeaturePolitics featureNews={featureNews} />
-
-                        <FeatureInternational featureNews={featureNews} />
-
-                        <DoubleFeature headline="বাংলাদেশ" />
-                        <div style={{paddingBottom:'20px'}}><Advertise ads={AdsHorizontal_M} /></div>
-                        {/* <HomeSlider /> */}
-                        <SingleFeature headline="আন্তর্জাতিক" />
-                        <ThumbnailList headline="রাজনীতি" />
-                        <div style={{paddingBottom:'20px'}}><Advertise ads={AdsHorizontal_Static} /></div>
-                        <SingleFeature headline="আইন ও মানবাধিকার" />
-                        <div style={{paddingBottom:'20px'}}><Advertise ads={AdsHorizontal_M} /></div>
+                        </div>
+                        <div className='news-details__text'>
+                            <p>{singleItem.descriptions}</p>
+                        </div>
+                        {/* <SlickCarousel /> */}
+                        {/* Ads section */}
+                        <div className='details-ads'>
+                            <img src={stroller} alt="Stroller ads" />
+                        </div>
                     </div>
-
-                    {/* Sidebar Content */}
-                    <div className="category-section__content--column">
-                        <Sidebar />
+                    
+                    <div className='page-sidebar'>
+                        <div className="sidebar-ads">
+                            <Link to=""><img src={sidebar_ads1} alt="Thums ads" /> </Link>
+                        </div>
+                        <FilterTab />
+                        <div className='sidebar-videos'>
+                            <iframe width="683" height="384" src="https://www.youtube.com/embed/EpLX09EwhcY" title="10 Creative Commercial Ad 2022।" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
             <Footer />
         </div>
     );
-}
+  }
 
-export default Homepage;
+export default Previews;

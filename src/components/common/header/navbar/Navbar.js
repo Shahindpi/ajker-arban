@@ -36,7 +36,6 @@ class Navbar extends Component{
                             </ul> */}
                             <ul className="flex-container">
                                 {/* <li><NavLink to="/login">Login</NavLink></li>*/}
-                                <li><Link to="/details">Details</Link></li>
                                 <li><Link to="/bangladesh">বাংলাদেশ</Link></li>
                                 <li><Link to="/politics">রাজনীতি</Link></li>
                                 <li><Link to="/economics">অর্থনীতি</Link></li>

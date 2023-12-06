@@ -27,6 +27,11 @@
                         color : $default;
                     }
                 }
+                h2{
+                    font-size: 24px;
+                    font-weight: 600;
+                    color : $black;
+                }
             }
             .short-description{
                 line-height: 24px;
@@ -48,8 +53,8 @@
             .double-item{
                 width: 48%;
                 &__title{
-                    font-size: 16px;
-                    font-weight: 600;
+                    font-size: 18px;
+                    font-weight: 700;
                     line-height: 1.5;
                     padding : 16px 0 0;
                 }
