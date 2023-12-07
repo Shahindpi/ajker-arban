@@ -27,7 +27,7 @@ const FeatureInternational = ({featureNews}) => {
                         <div className="single-news" key={latestFeatureInternational.id}>
                             <div className="single-news__image"><Link to={`/previews/${latestFeatureInternational.id}`}><img src={latestFeatureInternational.img} al={latestFeatureInternational.alt} /></Link></div>
                             <div className="single-news__title"><Link to={`/previews/${latestFeatureInternational.id}`}>{latestFeatureInternational.title}</Link></div>
-                            <div className="single-news__description"><Link to={`/previews/${latestFeatureInternational.id}`}>{latestFeatureInternational.descriptions.slice(0, 200)}</Link></div>
+                            <div className="single-news__description"><Link to={`/previews/${latestFeatureInternational.id}`}>{latestFeatureInternational.descriptions.slice(0, 150)}</Link></div>
                         </div>
                     )}
                 </div>

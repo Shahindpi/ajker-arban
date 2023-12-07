@@ -44,8 +44,14 @@
                             padding-right: 0;
                         }
                     }
-                    &:nth-child(9){
+                    &:nth-child(8){
                         min-width: 150px;
+                    }
+                    &:nth-child(9){
+                        min-width: 100px;
+                    }
+                    &:nth-child(11){
+                        min-width: 130px;
                     }
 
                 }

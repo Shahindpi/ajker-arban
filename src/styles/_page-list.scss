@@ -8,4 +8,14 @@
         flex-wrap: wrap;
         padding-top: 30px;
     }
+    .category-section__content{
+        .category-wrapper {
+            .cat-thumbnail {
+                flex-wrap: nowrap;
+                .single-column{
+                    
+                }
+            }
+        }
+    }
 }

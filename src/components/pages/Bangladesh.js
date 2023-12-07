@@ -9,6 +9,8 @@ import DoubleFeature from '../home_category/DoubleFeature';
 import ThumbnailList from '../home_category/Thumbnail';
 import FilterTab from '../home_sidebar/FilterTab';
 import { GoChevronRight } from "react-icons/go";
+import FeatureBangladesh from '../feature_news/FeatureBangladesh';
+import ListPages from './ListPages';
 
 
 
@@ -26,11 +28,7 @@ export default function Bangladesh(){
                 <div className='page-details page-list'>
                     <div className='news-details category-section'>
                         <div className='page-list__featureNews flex-box category-section__content'>
-                            <DoubleFeature headline="বাংলাদেশ" />
-                            <div className='page-list__featureNews--col'>
-                                
-                            </div>
-                            <ThumbnailList headline="বাংলাদেশর সকল খবর" />
+                            <ListPages pageName="বাংলাদেশ" />
                         </div>
                         {/* Ads section */}
                         <div className='details-ads'>

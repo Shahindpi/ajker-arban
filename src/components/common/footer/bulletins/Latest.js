@@ -1,59 +1,27 @@
-import { Link } from "react-router-dom";
-import latest1 from './../../../../assets/images/latest1.jpg';
-import latest2 from './../../../../assets/images/latest2.jpg';
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 
 
-function Latest(){
+function Latest({featureNews}){
+    
+    const { id } = useParams();
+
+    const descendingItems = featureNews.slice().reverse();
+
+    // Get all items except the latest one
+    const latestNews = descendingItems.slice(0, 5);
+
     return(
         <div className="latest-bulletins-container">
-            <div className="latest-bulletins-container__single">
-                <Link to="/">
-                    <div className="latest-bulletins-container__single--img"><img src={latest1} alt="related alt" /></div>
-                    <div className="latest-bulletins-container__single--title">গুলিস্তানে বাস ও ট্রাকের ধাক্কায় ২ জনের মৃত্যু</div>
+            
+            {latestNews.map((lastNews) => (
+                <div className="latest-bulletins-container__single" key={lastNews.id}>
+                <Link to={`/previews/${lastNews.id}`}>
+                    <div className="latest-bulletins-container__single--img"><img src={lastNews.img} al={lastNews.alt} /></div>
+                    <div className="latest-bulletins-container__single--title">{lastNews.title.slice(0, 60)}</div>
                 </Link>
             </div>
-            <div className="latest-bulletins-container__single">
-                <Link to="/">
-                    <div className="latest-bulletins-container__single--img"><img src={latest2} alt="related alt" /></div>
-                    <div className="latest-bulletins-container__single--title">পদ্মা সেতুর টোল প্লাজা, নদীর তীরের বাঁধ ঘুরে মুগ্ধ মানুষ</div>
-                </Link>
-            </div>
-            <div className="latest-bulletins-container__single">
-                <Link to="/">
-                    <div className="latest-bulletins-container__single--img"><img src={latest1} alt="related alt" /></div>
-                    <div className="latest-bulletins-container__single--title">গুলিস্তানে বাস ও ট্রাকের ধাক্কায় ২ জনের মৃত্যু</div>
-                </Link>
-            </div>
-            <div className="latest-bulletins-container__single">
-                <Link to="/">
-                    <div className="latest-bulletins-container__single--img"><img src={latest2} alt="related alt" /></div>
-                    <div className="latest-bulletins-container__single--title">পদ্মা সেতুর টোল প্লাজা, নদীর তীরের বাঁধ ঘুরে মুগ্ধ মানুষ</div>
-                </Link>
-            </div>
-            <div className="latest-bulletins-container__single">
-                <Link to="/">
-                    <div className="latest-bulletins-container__single--img"><img src={latest1} alt="related alt" /></div>
-                    <div className="latest-bulletins-container__single--title">গুলিস্তানে বাস ও ট্রাকের ধাক্কায় ২ জনের মৃত্যু</div>
-                </Link>
-            </div>
-            <div className="latest-bulletins-container__single">
-                <Link to="/">
-                    <div className="latest-bulletins-container__single--img"><img src={latest2} alt="related alt" /></div>
-                    <div className="latest-bulletins-container__single--title">পদ্মা সেতুর টোল প্লাজা, নদীর তীরের বাঁধ ঘুরে মুগ্ধ মানুষ</div>
-                </Link>
-            </div>
-            <div className="latest-bulletins-container__single">
-                <Link to="/">
-                    <div className="latest-bulletins-container__single--img"><img src={latest1} alt="related alt" /></div>
-                    <div className="latest-bulletins-container__single--title">গুলিস্তানে বাস ও ট্রাকের ধাক্কায় ২ জনের মৃত্যু</div>
-                </Link>
-            </div>
-            <div className="latest-bulletins-container__single">
-                <Link to="/">
-                    <div className="latest-bulletins-container__single--img"><img src={latest2} alt="related alt" /></div>
-                    <div className="latest-bulletins-container__single--title">পদ্মা সেতুর টোল প্লাজা, নদীর তীরের বাঁধ ঘুরে মুগ্ধ মানুষ</div>
-                </Link>
-            </div>
+            ))}
         </div>
     );
 }

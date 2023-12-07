@@ -129,6 +129,7 @@
     .header-section{
         .header-content{
             position: relative;
+            overflow: unset !important;
             .menu-bar{
                 .flex-container{
                     position: absolute;
@@ -144,9 +145,11 @@
                     box-shadow: 3px 5px 15px #ce5715;
                     border-radius: 5px 0 0 5px;
                     li{
+                        padding: 10px 0;
                         a{
                             border-bottom: 1px solid #fb8c4f;
                             color : $white;
+                            font-size: 16px;
                         }
                     }
                     svg{

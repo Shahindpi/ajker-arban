@@ -43,9 +43,9 @@
                         align-items: flex-start;
                         &__title{
                             font-size: 18px;
-                            padding: 10px 0;
                             width: 100%;
                             font-weight: 600;
+                            padding: 10px 0;
                         }
                         &__description{
                             line-height: 1.5;
@@ -53,7 +53,9 @@
                         .news-time{
                             padding : 10px 0 0;
                         }
+                        
                     }
+                    
                     &:first-child{
                         .single-news{
                             flex-wrap: wrap;
@@ -71,8 +73,8 @@
                                 font-size: 14px;
                                 width : 61%;
                                 margin : 0 4% 0;
-                                padding : 0;
                                 font-weight: 500;
+                                padding: 0 10px;
                             }
                             &:first-child{
                                 padding-top : 0;
@@ -96,7 +98,6 @@
                             font-size: 14px;
                             width : 61%;
                             margin : 0 4% 0;
-                            padding : 0;
                             font-weight: 500;
                         }
                         &:first-child{
@@ -108,14 +109,15 @@
                                 margin : 0;
                                 font-size: 18px;
                                 width : 100%;
-                                padding : 0 10px;
                                 font-weight: 600;
+                                padding: 10px 0;
                             }
                             .single-news__description{
                                 padding-bottom : 15px;
                             }
                         }
                     }
+                    
                     &:last-child{
                         .single-news{
                             flex-wrap: nowrap;
@@ -238,6 +240,27 @@
                     .cJeRRR{
                         background-color: rgba(249, 109, 32, 0.4);
                         box-shadow: 0 0 1px 3px rgba(249, 109, 32, 0.9);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.modify-category-section{
+    .feature-politics-col{
+        .feature-politics{
+            .single-news__description{
+                display: none;
+            }
+        }
+        &:first-child{
+            .feature-politics{
+                .single-news__title{
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4){
+                        padding: 0;
                     }
                 }
             }

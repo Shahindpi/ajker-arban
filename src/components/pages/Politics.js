@@ -1,4 +1,5 @@
 import React from 'react';
+// import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 // import news_img from '../../assets/images/news-img1.jpg';
 import stroller from '../../assets/images/ads/stroller2.gif';
@@ -13,6 +14,9 @@ import { GoChevronRight } from "react-icons/go";
 
 
 export default function Politics(){
+
+
+
     return(
         <div className='page-wrapper main-wrapper'>
             <Navbar />

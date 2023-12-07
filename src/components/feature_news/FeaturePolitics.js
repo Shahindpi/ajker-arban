@@ -5,40 +5,38 @@ const FeaturePolitics = ({featureNews}) => {
 
     const { id } = useParams();
 
-    // Filter features for 'politics' category
-    const politicsFeatures = featureNews.filter(feature =>
-        feature.category.some(cat => cat.name === 'politics')
-    );
-    
-    // Get the latest feature for 'politics'
-    const latestFeaturePolitics = politicsFeatures.length > 0 ? politicsFeatures[0] : null;
-    
+    const descendingItems = featureNews.slice().reverse();
 
     // Filter restOfFeatures for 'politics' category
-    const allFeaturesPolitics = featureNews
-    .filter(feature => feature.category.some(cat => cat.name === 'politics')).slice(1, 6);
+    const featurePoliticsCol1 = descendingItems
+    .filter(descendingItems => descendingItems.category.some(cat => cat.name === 'politics')).slice(0, 4);
+    
+    // Filter restOfFeatures for 'politics' category
+    const featurePoliticsCol2 = descendingItems
+    .filter(descendingItems => descendingItems.category.some(cat => cat.name === 'politics')).slice(1, 5);
 
     return (
-        <div className="category-wrapper">
+        <div className="category-wrapper modify-category-section">
             <div className="category-section__content--headline">রাজনীতি</div>
-            <div className="category-wrapper__content single-feature">
-                <div className="single-column">
-                    {latestFeaturePolitics && (
-                        <div className="single-news" key={latestFeaturePolitics.id}>
-                            <div className="single-news__image"><Link to={`/previews/${latestFeaturePolitics.id}`}><img src={latestFeaturePolitics.img} al={latestFeaturePolitics.alt} /></Link></div>
-                            <div className="single-news__title"><Link to={`/previews/${latestFeaturePolitics.id}`}>{latestFeaturePolitics.title}</Link></div>
-                            <div className="single-news__description">{latestFeaturePolitics.descriptions.slice(0, 200)}</div>
-                        </div>
-                    )}
-                </div>
-                <div className="single-column">
-                    {allFeaturesPolitics.map((feature) => (
-                        <div className="single-news" key={feature.id}>
-                            <div className="single-news__image"><Link to={`/previews/${latestFeaturePolitics.id}`}><img src={feature.img} alt={feature.alt} /></Link></div>
-                            <div className="single-news__title"><Link to={`/previews/${latestFeaturePolitics.id}`}>{feature.title}</Link></div>
+            <div className="category-wrapper__content cat-double-feature">
+                <div className="single-column feature-politics-col">
+                    {featurePoliticsCol1.map((politics) => (
+                        <div className="single-news feature-politics" key={politics.id}>
+                            <div className="single-news__image"><Link to={`/previews/${politics.id}`}><img src={politics.img} alt={politics.alt} /></Link></div>
+                            <div className="single-news__title"><Link to={`/previews/${politics.id}`}>{politics.title}</Link></div>
+                            <div className="single-news__description"><Link to={`/previews/${politics.id}`}>{politics.descriptions.slice(0, 100)}...</Link></div>
                         </div>
                     ))}
-                </div>
+                </div> 
+                <div className="single-column feature-politics-col">
+                    {featurePoliticsCol2.map((politics) => (
+                        <div className="single-news feature-politics" key={politics.id}>
+                            <div className="single-news__image"><Link to={`/previews/${politics.id}`}><img src={politics.img} alt={politics.alt} /></Link></div>
+                            <div className="single-news__title"><Link to={`/previews/${politics.id}`}>{politics.title}</Link></div>
+                            <div className="single-news__description"><Link to={`/previews/${politics.id}`}>{politics.descriptions.slice(0, 100)}...</Link></div>
+                        </div>
+                    ))}
+                </div> 
             </div>
         </div>
     );
