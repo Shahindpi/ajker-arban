@@ -3,9 +3,11 @@
 @import "./mixins";
 
 .scroller-section{
-    background: rgba(255, 255, 255, 0.6);
+    margin-top: 70px;
     &__content{
+        padding-bottom: 0 !important;
         .scroller-wrapper{
+            background: rgba(255, 255, 255, 0.6);
             border : 2px solid $default;
             border-right: 10px solid $default;
         }

@@ -3,7 +3,7 @@
 @import "./mixins";
 
 .header-section{
-    background: $white;
+    background: $default-blue;
     width : 100%;
     z-index: 99999;
     min-height: 65px;
@@ -12,8 +12,10 @@
     box-shadow: 0px 5px 10px -12px $gray;
     position: fixed;
     top: 0;
+    max-width: 1440px;
+    margin: 0 auto;
     .header-content{
-        padding : 10px 5% 0;
+        padding : 0 5%;
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
@@ -33,10 +35,10 @@
                     list-style: none;
                     a{
                         padding : 14px 12px;
-                        color : $black;
+                        color : $white;
                         font-size : 14px;
                         &:hover{
-                            color: $default;
+                            color: $default2;
                         }
                     }
                     &:last-child{

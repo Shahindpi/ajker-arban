@@ -9,7 +9,7 @@ const FeatureEconomics = ({featureNews}) => {
 
     // Filter restOfFeatures for 'politics' category
     const featureEconomics = descendingItems
-    .filter(descendingItems => descendingItems.category.some(cat => cat.name === 'bangladesh')).slice(0, 10);
+    .filter(descendingItems => descendingItems.category.some(cat => cat.name === 'economics')).slice(0, 10);
 
     return(
         <div className="category-wrapper">

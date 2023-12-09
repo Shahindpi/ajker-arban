@@ -13,7 +13,7 @@ const FeaturePolitics = ({featureNews}) => {
     
     // Filter restOfFeatures for 'politics' category
     const featurePoliticsCol2 = descendingItems
-    .filter(descendingItems => descendingItems.category.some(cat => cat.name === 'politics')).slice(1, 5);
+    .filter(descendingItems => descendingItems.category.some(cat => cat.name === 'politics')).slice(5, 9);
 
     return (
         <div className="category-wrapper modify-category-section">
