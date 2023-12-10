@@ -153,7 +153,7 @@
                         }
                     }
                     svg{
-                        margin: -26px 0 0 -40px;
+                        margin: -20px 0 0 -30px;
                         font-size: 24px;
                         background: $white;
                         width: 26px;
@@ -201,8 +201,11 @@
             &--double-column {
                 padding: 0 8px;
                 .double-item {
-                    width: 100%;
                     &__title{
+                        a{
+                            min-height: 78px;
+                            display: block;
+                        }
 
                     }
                     &__image{

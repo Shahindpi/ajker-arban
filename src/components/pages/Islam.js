@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import news_img from '../../assets/images/news-img1.jpg';
 import stroller from '../../assets/images/ads/stroller2.gif';
 import sidebar_ads1 from '../../assets/images/ads/thumb.gif';
 import Navbar from '../common/header/navbar/Navbar';
 import Footer from '../common/footer/Footer';
-import DoubleFeature from '../home_category/DoubleFeature';
-import ThumbnailList from '../home_category/Thumbnail';
 import FilterTab from '../home_sidebar/FilterTab';
 import { GoChevronRight } from "react-icons/go";
-import ListInternational from './list/ListInternational';
+import ListEducations from './list/ListEducations';
+import ListIslam from './list/ListIslam';
 
 
 
-export default function International(){
+export default function Islam(){
     return(
         <div className='page-wrapper main-wrapper'>
             <Navbar />
@@ -21,13 +19,13 @@ export default function International(){
                 <div className='breadcrumb'>
                     <ul>
                         <li><Link to="/">প্রচ্ছদ <span><GoChevronRight /></span></Link></li>
-                        <li><Link to="/international">আন্তর্জাতিক</Link></li>
+                        <li><Link to="/islam">ইসলাম ও জীবন</Link></li>
                     </ul>
                 </div>
                 <div className='page-details page-list'>
                     <div className='news-details category-section'>
                         <div className='page-list__featureNews flex-box category-section__content'>
-                            <ListInternational pagename="আন্তর্জাতিক" />
+                            <ListIslam pageName="ইসলাম ও জীবন" />
                         </div>
                         {/* Ads section */}
                         <div className='details-ads'>

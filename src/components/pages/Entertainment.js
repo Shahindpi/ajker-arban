@@ -9,6 +9,7 @@ import DoubleFeature from '../home_category/DoubleFeature';
 import ThumbnailList from '../home_category/Thumbnail';
 import FilterTab from '../home_sidebar/FilterTab';
 import { GoChevronRight } from "react-icons/go";
+import ListEntertainments from './list/ListEntertainments';
 
 
 
@@ -20,17 +21,13 @@ export default function Entertainment(){
                 <div className='breadcrumb'>
                     <ul>
                         <li><Link to="/">প্রচ্ছদ <span><GoChevronRight /></span></Link></li>
-                        <li><Link to="/sports">বিনোদন</Link></li>
+                        <li><Link to="/entertainment">বিনোদন</Link></li>
                     </ul>
                 </div>
                 <div className='page-details page-list'>
                     <div className='news-details category-section'>
                         <div className='page-list__featureNews flex-box category-section__content'>
-                            <DoubleFeature headline="বিনোদন" />
-                            <div className='page-list__featureNews--col'>
-                                
-                            </div>
-                            <ThumbnailList headline="বিনোদন সকল খবর" />
+                            <ListEntertainments pageName="বিনোদন" />
                         </div>
                         {/* Ads section */}
                         <div className='details-ads'>

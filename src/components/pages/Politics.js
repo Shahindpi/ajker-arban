@@ -10,6 +10,7 @@ import DoubleFeature from '../home_category/DoubleFeature';
 import ThumbnailList from '../home_category/Thumbnail';
 import FilterTab from '../home_sidebar/FilterTab';
 import { GoChevronRight } from "react-icons/go";
+import ListPolitics from './list/ListPolitics';
 
 
 
@@ -30,11 +31,7 @@ export default function Politics(){
                 <div className='page-details page-list'>
                     <div className='news-details category-section'>
                         <div className='page-list__featureNews flex-box category-section__content'>
-                            <DoubleFeature headline="রাজনীতি" />
-                            <div className='page-list__featureNews--col'>
-                                
-                            </div>
-                            <ThumbnailList headline="রাজনীতির সকল খবর" />
+                            <ListPolitics pageName="রাজনীতি" />
                         </div>
                         {/* Ads section */}
                         <div className='details-ads'>

@@ -1,15 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import news_img from '../../assets/images/news-img1.jpg';
 import stroller from '../../assets/images/ads/stroller2.gif';
 import sidebar_ads1 from '../../assets/images/ads/thumb.gif';
 import Navbar from '../common/header/navbar/Navbar';
 import Footer from '../common/footer/Footer';
-import DoubleFeature from '../home_category/DoubleFeature';
-import ThumbnailList from '../home_category/Thumbnail';
 import FilterTab from '../home_sidebar/FilterTab';
 import { GoChevronRight } from "react-icons/go";
-import FeatureBangladesh from '../feature_news/FeatureBangladesh';
 import ListPages from './ListPages';
 
 

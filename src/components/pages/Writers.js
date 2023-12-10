@@ -9,11 +9,12 @@ import DoubleFeature from '../home_category/DoubleFeature';
 import ThumbnailList from '../home_category/Thumbnail';
 import FilterTab from '../home_sidebar/FilterTab';
 import { GoChevronRight } from "react-icons/go";
-import ListInternational from './list/ListInternational';
+import FeatureBangladesh from '../feature_news/FeatureBangladesh';
+import ListPages from './ListPages';
 
 
 
-export default function International(){
+export default function Writers(){
     return(
         <div className='page-wrapper main-wrapper'>
             <Navbar />
@@ -21,13 +22,13 @@ export default function International(){
                 <div className='breadcrumb'>
                     <ul>
                         <li><Link to="/">প্রচ্ছদ <span><GoChevronRight /></span></Link></li>
-                        <li><Link to="/international">আন্তর্জাতিক</Link></li>
+                        <li><Link to="/writers">সম্পাদকীয়</Link></li>
                     </ul>
                 </div>
                 <div className='page-details page-list'>
                     <div className='news-details category-section'>
                         <div className='page-list__featureNews flex-box category-section__content'>
-                            <ListInternational pagename="আন্তর্জাতিক" />
+                            <ListPages pageName="সম্পাদকীয়" />
                         </div>
                         {/* Ads section */}
                         <div className='details-ads'>

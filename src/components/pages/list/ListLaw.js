@@ -1,22 +1,9 @@
-
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
-import NewsScroller from './../scroller/NewsScroller';
-import FeatureNews from './../feature_news/FeatureNews';
-import Navbar from './../common/header/navbar/Navbar';
-import Sidebar from './../home_sidebar/Sidebar'
-import Footer from './../common/footer/Footer';
-import Advertise from './../../components/common/advertise/Advertise';
-import AdsImage from './../../assets/images/ads/48_HPK_T6768_HP-LJ400_01_2000x180.gif';
-import AdsImageMobile from './../../assets/images/ads/48_HPK_T6768_HP-LJ400_01_640x100.gif';
-import AdsHorizontal_M from './../../assets/images/ads/48_HPK_T6768_HP-LJ400_01_640x100.gif';
-import AdsHorizontal_Static from './../../assets/images/ads/43XX_BIAX_1HPGMIAA1_970x250_US_ENG_01.jpg';
-import FeaturePolitics from '../feature_news/FeaturePolitics';
-import FeatureInternational from '../feature_news/FeatureInternational';
-import FeatureSports from '../feature_news/FeatureSports';
-import FeatureBangladesh from '../feature_news/FeatureBangladesh';
-import FeatureEconomics from '../feature_news/FeatureEconomics';
 
-function Homepage(){
+const ListLaw = ({listData}) => {
+
     const [featureNews, setFeatureNews] = useState([
         {
             "id" : 1,
@@ -656,7 +643,7 @@ function Homepage(){
             ]
         },
         // {
-        //     "id" : 51,
+        //     "id" : 61,
         //     "title" : "title",
         //     "descriptions" : "descriptions",
         //     "img" : "https://ajkerarban.com/media/health-1.jpg",
@@ -669,43 +656,33 @@ function Homepage(){
         //     ]
         // },
     ]);
+
+    const { id } = useParams();
+
+    const descendingItems = featureNews.slice().reverse();
+
+    // Filter restOfFeatures for 'law' category
+    const listLaw = descendingItems
+    .filter(descendingItems => descendingItems.category.some(cat => cat.name === 'law')).slice(0, 10);
+
     return(
-        <div className="main-wrapper">
-            <Navbar />
-            <NewsScroller featureNews={featureNews} />
-            <FeatureNews featureNews={featureNews} />
-
-            {/* Homepage Categories */}
-            <div className="category-section">
-                    <div className="category-section__content custom-row">
-
-                    {/* Main Content */}
-                    <div className="category-section__content--column">
-
-                        <FeatureBangladesh featureNews={featureNews} />
-                        
-                        <FeaturePolitics featureNews={featureNews} />
-
-                        <FeatureEconomics featureNews={featureNews} />
-
-                        <FeatureInternational featureNews={featureNews} />
-
-                        <div style={{paddingBottom:'20px'}}><Advertise ads={AdsHorizontal_M} /></div>
-
-                        <FeatureSports featureNews={featureNews} />
-                        <div style={{paddingBottom:'20px'}}><Advertise ads={AdsHorizontal_Static} /></div>
-
-                    </div>
-
-                    {/* Sidebar Content */}
-                    <div className="category-section__content--column">
-                        <Sidebar />
-                    </div>
+        <div className="category-wrapper">
+            <div className="category-section__content--headline">আইন ও মানবাধিকার</div>
+            <div className="category-wrapper__content cat-thumbnail">
+                <div className="single-column">
+                    {listLaw.map((law) => (
+                        <div className="single-news" key={law.id}>
+                            <div className="single-news__image"><Link to={`/previews/${law.id}`}><img src={law.img} alt={law.alt} /></Link></div>
+                            <div className="text-wrapper">
+                                <div className="single-news__title"><Link to={`/previews/${law.id}`}>{law.title}</Link></div>
+                                <div className="single-news__description"><Link to={`/previews/${law.id}`}>{law.descriptions.slice(0, 100)}</Link></div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
-            <Footer />
         </div>
     );
 }
 
-export default Homepage;
+export default ListLaw;

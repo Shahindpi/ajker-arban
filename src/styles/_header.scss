@@ -3,10 +3,9 @@
 @import "./mixins";
 
 .header-section{
-    background: $default-blue;
+    background: $gray-light;
     width : 100%;
     z-index: 99999;
-    min-height: 65px;
     top: 0;
     border-bottom: 1px solid $off-white;
     box-shadow: 0px 5px 10px -12px $gray;
@@ -14,6 +13,7 @@
     top: 0;
     max-width: 1440px;
     margin: 0 auto;
+    border-bottom: 2px solid $default2;
     .header-content{
         padding : 0 5%;
         justify-content: space-between;
@@ -23,6 +23,12 @@
             max-width: 180px;
             min-width: 130px;
             padding: 14px 0;
+        }
+        .search-icon{
+            svg{
+                font-size: 30px;
+                color: $default;
+            }
         }
         .menu-bar{
             padding-left: 30px;
@@ -35,7 +41,7 @@
                     list-style: none;
                     a{
                         padding : 14px 12px;
-                        color : $white;
+                        color : $black;
                         font-size : 14px;
                         &:hover{
                             color: $default2;
@@ -46,8 +52,11 @@
                             padding-right: 0;
                         }
                     }
-                    &:nth-child(8){
+                    &:nth-child(7){
                         min-width: 150px;
+                    }
+                    &:nth-child(8){
+                        min-width: 100px;
                     }
                     &:nth-child(9){
                         min-width: 100px;
@@ -59,19 +68,21 @@
                 }
             }
             .hamburger{
-                width : 2rem;
-                height: 2rem;
+                width: 33px;
+                height: 29px;
                 display: flex;
                 flex-flow: column nowrap;
                 justify-content: space-around;
                 position: absolute;
                 top: 15px;
-                right : 20px;
+                left : 20px;
+                background: $default;
+                padding: 6px 7px;
                 span{
-                    width : 2rem;
-                    height: 0.25rem;
+                    width: 18px;
+                    height: 3px;
                     border-radius: 10px;
-                    background : $gray;
+                    background : $white;
                     &:hover{
                         &:nth-child(1){
                             transform: rotate(45deg);

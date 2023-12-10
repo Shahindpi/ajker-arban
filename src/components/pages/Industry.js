@@ -1,19 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import news_img from '../../assets/images/news-img1.jpg';
 import stroller from '../../assets/images/ads/stroller2.gif';
 import sidebar_ads1 from '../../assets/images/ads/thumb.gif';
 import Navbar from '../common/header/navbar/Navbar';
 import Footer from '../common/footer/Footer';
-import DoubleFeature from '../home_category/DoubleFeature';
-import ThumbnailList from '../home_category/Thumbnail';
 import FilterTab from '../home_sidebar/FilterTab';
 import { GoChevronRight } from "react-icons/go";
-import ListInternational from './list/ListInternational';
+import ListHealth from './list/ListHealth';
+import ListIndustry from './list/ListIndustry';
 
 
 
-export default function International(){
+export default function Industry(){
     return(
         <div className='page-wrapper main-wrapper'>
             <Navbar />
@@ -21,13 +19,13 @@ export default function International(){
                 <div className='breadcrumb'>
                     <ul>
                         <li><Link to="/">প্রচ্ছদ <span><GoChevronRight /></span></Link></li>
-                        <li><Link to="/international">আন্তর্জাতিক</Link></li>
+                        <li><Link to="/industry">শিল্প ও বাণিজ্য</Link></li>
                     </ul>
                 </div>
                 <div className='page-details page-list'>
                     <div className='news-details category-section'>
                         <div className='page-list__featureNews flex-box category-section__content'>
-                            <ListInternational pagename="আন্তর্জাতিক" />
+                            <ListIndustry pageName="শিল্প ও বাণিজ্য" />
                         </div>
                         {/* Ads section */}
                         <div className='details-ads'>

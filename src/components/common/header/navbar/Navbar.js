@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../../../assets/images/ajker-arban-1.png';
 import { FaTimes } from "react-icons/fa";
+import { IoSearchOutline } from "react-icons/io5";
 
 
 class Navbar extends Component{
@@ -27,9 +28,6 @@ class Navbar extends Component{
             <section className="page-section">
                 <header className="header-section">
                     <nav className="header-content flex-container">
-                        <div className="logo">
-                            <Link to="/"><img src={logo} alt="Ajker Arban Logo" /></Link>
-                        </div>
                         <div className="menu-bar mobile-hide">
                             {/* <ul className="flex-container" breakPoints = {breakPoints}>
                                 {items.map(item => <li key={item.id}><a href="">{item.menu}</a></li>)}
@@ -41,10 +39,10 @@ class Navbar extends Component{
                                 <li><Link to="/economics">অর্থনীতি</Link></li>
                                 <li><Link to="/international">আন্তর্জাতিক</Link></li>
                                 <li><Link to="/sports">খেলা</Link></li>
-                                <li><Link to="/writers">সম্পাদকীয়</Link></li>
-                                <li><Link to="/entertainments">বিনোদন</Link></li>
-                                <li><Link to="/law-huminity">আইন ও মানবাধিকার</Link></li>
-                                <li><Link to="/techWorld">টেক ওয়ার্ল্ড</Link></li>
+                                {/* <li><Link to="/writers">সম্পাদকীয়</Link></li> */}
+                                <li><Link to="/entertainment">বিনোদন</Link></li>
+                                <li><Link to="/lawHuminity">আইন ও মানবাধিকার</Link></li>
+                                <li><Link to="/techworld">টেক ওয়ার্ল্ড</Link></li>
                                 <li><Link to="/lifestyle">জীবনযাপন</Link></li>
                                 <li><Link to="/health">হেলথ কর্নার</Link></li>
                                 {/* <li><Link to="/industry">শিল্প ও বাণিজ্য</Link></li>
@@ -53,7 +51,7 @@ class Navbar extends Component{
                                 <li><Link to="/islam">ইসলাম ও জীবন</Link></li>
                                 <li><Link to="/todayEvents">আজকের এই দিনে</Link></li>
                                 <li><Link to="/agriculture">কৃষি</Link></li>
-                                <li><Link to="/vacancy">চাকরি</Link></li>
+                                <li><Link to="/job">চাকরি</Link></li>
                                 <li><Link to="/editorial">সম্পাদকীয়</Link></li>
                                 <li><Link to="/feature">ফিচার</Link></li> */}
                             </ul>
@@ -65,33 +63,35 @@ class Navbar extends Component{
                                 <span></span>
                                 {
                                     this.state.showNavigation ?
-                                    <ul className="flex-container">
-                                        {/* <button onClick={()=>{this.setState({showNavigation:!this.state.showNavigation})}}>Close</button> */}
-                                        <FaTimes onClick={()=>{this.setState({showNavigation:!this.state.showNavigation})}} />
-                                        <li><Link to="/">প্রচ্ছদ</Link></li>
-                                        <li><Link to="/bangladesh">বাংলাদেশ</Link></li>
-                                        <li><Link to="/politics">রাজনীতি</Link></li>
-                                        <li><Link to="/economics">অর্থনীতি</Link></li>
-                                        <li><Link to="/international">আন্তর্জাতিক</Link></li>
-                                        <li><Link to="/sports">খেলা</Link></li>
-                                        <li><Link to="/writers">সম্পাদকীয়</Link></li>
-                                        <li><Link to="/entertainments">বিনোদন</Link></li>
-                                        <li><Link to="/law-huminity">আইন ও মানবাধিকার</Link></li>
-                                        <li><Link to="/techWorld">টেক ওয়ার্ল্ড</Link></li>
-                                        <li><Link to="/lifestyle">জীবনযাপন</Link></li>
-                                        <li><Link to="/health">হেলথ কর্নার</Link></li>
-                                        <li><Link to="/industry">শিল্প ও বাণিজ্য</Link></li>
-                                        <li><Link to="/culture">সাহিত্য ও সংস্কৃতি</Link></li>
-                                        <li><Link to="/educations">শিক্ষাঙ্গন</Link></li>
-                                        <li><Link to="/islam">ইসলাম ও জীবন</Link></li>
-                                        <li><Link to="/todayEvents">আজকের এই দিনে</Link></li>
-                                        <li><Link to="/agriculture">কৃষি</Link></li>
-                                        <li><Link to="/vacancy">চাকরি</Link></li>
-                                        <li><Link to="/editorial">সম্পাদকীয়</Link></li>
-                                        <li><Link to="/feature">ফিচার</Link></li>
-                                        
-                
-                                    </ul>
+                                    <div className='nav-wrapper'>
+                                        <ul className="flex-container">
+                                            {/* <button onClick={()=>{this.setState({showNavigation:!this.state.showNavigation})}}>Close</button> */}
+                                            <FaTimes onClick={()=>{this.setState({showNavigation:!this.state.showNavigation})}} />
+                                            <li><Link to="/">প্রচ্ছদ</Link></li>
+                                            <li><Link to="/bangladesh">বাংলাদেশ</Link></li>
+                                            <li><Link to="/politics">রাজনীতি</Link></li>
+                                            <li><Link to="/economics">অর্থনীতি</Link></li>
+                                            <li><Link to="/international">আন্তর্জাতিক</Link></li>
+                                            <li><Link to="/sports">খেলা</Link></li>
+                                            <li><Link to="/writers">সম্পাদকীয়</Link></li>
+                                            <li><Link to="/entertainment">বিনোদন</Link></li>
+                                            <li><Link to="/lawHuminity">আইন ও মানবাধিকার</Link></li>
+                                            <li><Link to="/techworld">টেক ওয়ার্ল্ড</Link></li>
+                                            <li><Link to="/lifestyle">জীবনযাপন</Link></li>
+                                            <li><Link to="/health">হেলথ কর্নার</Link></li>
+                                            <li><Link to="/industry">শিল্প ও বাণিজ্য</Link></li>
+                                            <li><Link to="/culture">সাহিত্য ও সংস্কৃতি</Link></li>
+                                            <li><Link to="/educations">শিক্ষাঙ্গন</Link></li>
+                                            <li><Link to="/islam">ইসলাম ও জীবন</Link></li>
+                                            <li><Link to="/todayEvents">আজকের এই দিনে</Link></li>
+                                            <li><Link to="/agriculture">কৃষি</Link></li>
+                                            <li><Link to="/job">চাকরি</Link></li>
+                                            <li><Link to="/editorial">সম্পাদকীয়</Link></li>
+                                            <li><Link to="/feature">ফিচার</Link></li>
+                                            
+                    
+                                        </ul>
+                                    </div>
                                     :null
                                 }
                             </div>
@@ -108,6 +108,10 @@ class Navbar extends Component{
                             } */}
                             
                         </div>
+                        <div className="logo">
+                            <Link to="/"><img src={logo} alt="Ajker Arban Logo" /></Link>
+                        </div>
+                        <div className='search-icon'><IoSearchOutline /></div>
                     </nav>
                 </header>
             </section>

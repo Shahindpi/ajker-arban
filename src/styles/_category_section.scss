@@ -27,7 +27,7 @@
         .category-wrapper{
             // *** Default Category Design : Single Feature ***
             &__content{
-                padding: 20px 8px;
+                padding: 20px 0;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: flex-start;
@@ -168,6 +168,7 @@
                             margin: 0;
                             width: 100%;
                             font-weight: 600;
+                            padding: 0;
                         }
                         &__description{
                             padding : 10px 0;

@@ -3,8 +3,10 @@
 @import "./mixins";
 
 .footer-section{
-    background: $black;
-    color : $white;
+    background: $gray-light;
+    color : $black;
+    border-top: 2px solid $default2;
+    box-shadow: 5px 22px 15px 15px #333;
     &__wrapper{
         &--container{
             @extend .flex-container;
@@ -49,7 +51,7 @@
                                 height: 35px;
                                 align-items: center;
                                 justify-content: center;
-                                color : $white;
+                                color : $black;
                                 svg{
                                     font-size: 2rem;
                                 }
