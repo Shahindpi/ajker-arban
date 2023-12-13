@@ -6,7 +6,7 @@
     background: $gray-light;
     color : $black;
     border-top: 2px solid $default2;
-    box-shadow: 5px 22px 15px 15px #333;
+    box-shadow: 1px 5px 5px 0px $default2;
     &__wrapper{
         &--container{
             @extend .flex-container;

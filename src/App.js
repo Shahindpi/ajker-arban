@@ -3,7 +3,7 @@ import {
   Route,
   createRoutesFromElements,
   RouterProvider,
-  createBrowserRouter,
+  createHashRouter,
 } from 'react-router-dom';
 import Homepage from './components/pages/Homepage'
 import HelpLayout from './layouts/HelpLayout';
@@ -33,7 +33,7 @@ import Job from './components/pages/Job';
 import Editorial from './components/pages/Editorial';
 import Feature from './components/pages/Feature';
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   createRoutesFromElements(
     <Route>
       <Route path='/' element={<Homepage />} />

@@ -28,6 +28,9 @@ class Navbar extends Component{
             <section className="page-section">
                 <header className="header-section">
                     <nav className="header-content flex-container">
+                        <div className="logo">
+                            <Link to="/"><img src={logo} alt="Ajker Arban Logo" /></Link>
+                        </div>
                         <div className="menu-bar mobile-hide">
                             {/* <ul className="flex-container" breakPoints = {breakPoints}>
                                 {items.map(item => <li key={item.id}><a href="">{item.menu}</a></li>)}
@@ -107,9 +110,6 @@ class Navbar extends Component{
                                 :null
                             } */}
                             
-                        </div>
-                        <div className="logo">
-                            <Link to="/"><img src={logo} alt="Ajker Arban Logo" /></Link>
                         </div>
                         <div className='search-icon'><IoSearchOutline /></div>
                     </nav>

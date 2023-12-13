@@ -134,7 +134,7 @@
                 .flex-container{
                     position: absolute;
                     top: 0;
-                    right: 0;
+                    left: 0;
                     background : rgba(249, 109, 32, 0.98);
                     color : $white;
                     width : 250px;
@@ -187,9 +187,11 @@
     // *** Main header section ***
     .header-section{
         .header-content{
-            padding: 16px 5%;
+            padding: 15px;
             .logo{
                 padding : 0;
+                width: 60%;
+                order: 2;
             }
         }
     }
@@ -224,6 +226,7 @@
     .category-section{
         &__content{
             flex-wrap: wrap;
+            padding-top: 10px !important;
             &--column{
                 &:first-child{
                     width: 100%;
@@ -318,7 +321,7 @@
             .news-details{
                 width: 100%;
                 &__title{
-                    font-size: 1rem;
+                    font-size: 24px;
                     padding: 20px 0;
                 }
                 &__text{
