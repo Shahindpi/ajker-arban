@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
 
 
 const ListCulture = ({listData}) => {
@@ -784,17 +785,33 @@ const ListCulture = ({listData}) => {
 
     return(
         <div className="category-wrapper">
+            {/* Helmet for Open Graph tags */}
+            <Helmet>
+                {/* Set general Open Graph tags for the entire page */}
+                <meta property="og:type" content="website" />
+                {/* Add other necessary OG tags */}
+            </Helmet>
             <div className="category-section__content--headline">সাহিত্য ও সংস্কৃতি</div>
             <div className="category-wrapper__content cat-thumbnail">
                 <div className="single-column">
                     {listCulture.map((culture) => (
                         <div className="single-news" key={culture.id}>
+                            <Helmet>
+                                {/* Set individual Open Graph tags for each item */}
+                                <title>{culture.title}</title>
+                                <meta property="og:type" content="article" />
+                                <meta property="og:title" content={culture.title} />
+                                <meta property="og:description" content={culture.descriptions} />
+                                <meta property="og:url" content={`https://ajkerarban.com/#/previews/${culture.id}`} />
+                                <meta property="og:image" content={culture.img} />
+                                {/* Add other necessary OG tags */}
+                            </Helmet>
                             <div className="single-news__image"><Link to={`/previews/${culture.id}`}><img src={culture.img} alt={culture.alt} /></Link></div>
                             <div className="text-wrapper">
                                 <div className="single-news__title"><Link to={`/previews/${culture.id}`}>{culture.title}</Link></div>
                                 <div className="single-news__description"><Link to={`/previews/${culture.id}`}>{culture.descriptions.slice(0, 100)}</Link></div>
                             </div>
-                        </div>
+                        </div>  
                     ))}
                 </div>
             </div>

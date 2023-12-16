@@ -5,8 +5,10 @@ const FeatureSports = ({featureNews}) => {
 
     const { id } = useParams();
 
+    const descendingItems = featureNews.slice().reverse();
+
     // Filter features for 'sports' category
-    const FeatureSports = featureNews.filter(feature =>
+    const FeatureSports = descendingItems.filter(feature =>
         feature.category.some(cat => cat.name === 'sports')
     );
     
@@ -15,7 +17,7 @@ const FeatureSports = ({featureNews}) => {
     
 
     // Filter restOfFeatures for 'sports' category
-    const allFeaturesSports = featureNews
+    const allFeaturesSports = descendingItems
     .filter(feature => feature.category.some(cat => cat.name === 'sports')).slice(1, 5);
 
     return (

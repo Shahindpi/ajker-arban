@@ -5,8 +5,10 @@ const FeatureBangladesh = ({featureNews}) => {
 
     const { id } = useParams();
 
+    const descendingItems = featureNews.slice().reverse();
+
     // Filter features for 'International' category
-    const FeatureBangladesh = featureNews.filter(feature =>
+    const FeatureBangladesh = descendingItems.filter(feature =>
         feature.category.some(cat => cat.name === 'bangladesh')
     );
     
@@ -15,7 +17,7 @@ const FeatureBangladesh = ({featureNews}) => {
     
 
     // Filter restOfFeatures for 'International' category
-    const allFeaturesBangladesh = featureNews
+    const allFeaturesBangladesh = descendingItems
     .filter(feature => feature.category.some(cat => cat.name === 'bangladesh')).slice(1, 5);
 
     return (
