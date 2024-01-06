@@ -30,13 +30,16 @@
             .form-wrap{
                 margin: 10px 0;
                 text-align: center;
+                label{
+                    padding: 0 0 10px;
+                }
                 button{
                     border: none;
-                    padding: 15px;
+                    padding: 10px;
                     text-align: center;
                     color: $white;
                     background: $default;
-                    width: 100%;
+                    width: 90%;
                     font-size: 24px;
                     margin: 30px 0;
                 }

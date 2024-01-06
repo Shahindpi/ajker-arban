@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 // import news_img from '../../assets/images/news-img1.jpg';
 import stroller from '../../assets/images/ads/stroller2.gif';
 import sidebar_ads1 from '../../assets/images/ads/thumb.gif';
@@ -16,6 +16,12 @@ import ListPolitics from './list/ListPolitics';
 
 export default function Politics(){
 
+
+    const location = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top when the route changes
+    }, [location]);
 
 
     return(

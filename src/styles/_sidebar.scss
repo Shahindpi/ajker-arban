@@ -6,7 +6,6 @@
     .category-wrapper{
         margin: 30px 0;
         .cat-thumbnail{
-            margin : 20px 0 30px;
             .single-column{
                 justify-content: space-between;
                 .single-news{
@@ -21,6 +20,7 @@
                         .single-news__title{
                             font-size: 13px;
                             font-weight: normal;
+                            padding: 10px 0;
                         }
                         .single-news__description{
                             display: none;
@@ -35,7 +35,6 @@
             }
         }
         .single-feature{
-            margin : 20px 0;
             .single-column{
                 width : 100%;
                 .single-news{

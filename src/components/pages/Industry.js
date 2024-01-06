@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import stroller from '../../assets/images/ads/stroller2.gif';
 import sidebar_ads1 from '../../assets/images/ads/thumb.gif';
 import Navbar from '../common/header/navbar/Navbar';
@@ -12,6 +12,14 @@ import ListIndustry from './list/ListIndustry';
 
 
 export default function Industry(){
+
+    
+    const location = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top when the route changes
+    }, [location]);
+
     return(
         <div className='page-wrapper main-wrapper'>
             <Navbar />

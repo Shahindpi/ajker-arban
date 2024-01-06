@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import stroller from '../../assets/images/ads/stroller2.gif';
 import sidebar_ads1 from '../../assets/images/ads/thumb.gif';
 import Navbar from '../common/header/navbar/Navbar';
@@ -7,12 +7,23 @@ import Footer from '../common/footer/Footer';
 import FilterTab from '../home_sidebar/FilterTab';
 import { GoChevronRight } from "react-icons/go";
 import ListPages from './ListPages';
+import { Helmet } from 'react-helmet';
 
 
 
 export default function Bangladesh(){
+
+    const location = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0); // Scroll to the top when the route changes
+    }, [location]);
+
     return(
         <div className='page-wrapper main-wrapper'>
+            <Helmet>
+                <title>আজকের আরবান | বাংলাদেশ</title>
+            </Helmet>
             <Navbar />
             <div className='custom-row'>
                 <div className='breadcrumb'>

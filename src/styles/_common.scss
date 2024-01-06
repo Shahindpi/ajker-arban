@@ -103,3 +103,11 @@ a:-webkit-any-link {
         }
     }
 }
+
+.error-message {
+    text-align: center;
+    background: $gray-light;
+    padding: 15px;
+    border-radius: 5px;
+    color: $youtube;
+}

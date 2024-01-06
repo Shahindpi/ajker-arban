@@ -1,0 +1,46 @@
+@import "./variables";
+@import "./mixins";
+
+.create-news{
+    text-align: center;
+
+    h2{
+        padding: 30px;
+    }
+
+    form{
+        background: $white;
+        max-width: 750px;
+        margin: 0 auto;
+        box-shadow: 0 3px 10px 0 $off-white;    
+        padding: 30px;
+        border-radius: 5px;
+        label, input, select, textarea{
+            width: 100%;
+        }
+        label{
+            padding: 20px;
+            font-weight: 700;
+        }
+        input, textarea{
+            padding: 8px 20px;
+            border-radius: 5px;
+            border: 1px solid $gray;
+            &:focus-visible{
+                border: 1px solid $default2;
+                outline: 0;
+            }
+        }
+        button{
+            border: none;
+            padding: 10px;
+            text-align: center;
+            color: $white;
+            background: $default;
+            width: 300px;
+            font-size: 24px;
+            margin: 30px 0 0;
+            border-radius: 5px;
+        }
+    }
+}
